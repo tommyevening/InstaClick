@@ -1,4 +1,5 @@
 :root {
+    /* Kolory */
     --primary-color: #0095f6;
     --secondary-color: #00376b;
     --background-color: #fafafa;
@@ -9,6 +10,20 @@
     --success-color: #2ecc71;
     --warning-color: #e74c3c;
     --hover-color: #f8f8f8;
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    
+    /* Border radius */
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
 }
 
 * {
@@ -218,18 +233,6 @@ body {
     padding: 90px 20px 20px; /* Zwiększony padding-top, aby uwzględnić wysokość nawigacji */
 }
 
-/* Filtry */
-.filters {
-    background: var(--card-background);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 80px; /* Odległość od górnej krawędzi po przewinięciu */
-    z-index: 900; /* Mniejszy niż nawigacja, ale większy niż reszta contentu */
-}
-
 /* User profile */
 .user-profile {
     display: flex;
@@ -288,36 +291,6 @@ body {
     height: 1px;
     background-color: var(--border-color);
     margin: 5px 0;
-}
-
-/* Filters */
-.filters {
-    background: var(--card-background);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.filters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.filter-item {
-    position: relative;
-}
-
-.filter-item select,
-.filter-item input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    font-size: 14px;
-    appearance: none;
-    background: var(--card-background);
 }
 
 /* Siatka użytkowników */
@@ -461,4 +434,93 @@ body {
 
 .btn-secondary:hover {
     background-color: var(--background-color);
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--success-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1100;
+    animation: slideIn 0.3s ease;
+}
+
+.toast.show {
+    display: block;
+}
+
+.toast.error {
+    background: var(--warning-color);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Button animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::after {
+    width: 200%;
+    height: 200%;
+}
+
+/* Points animation */
+.points-update {
+    animation: pointsPulse 0.5s ease;
+}
+
+@keyframes pointsPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Button state styles */
+.btn-primary.active {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary.active {
+    background-color: var(--warning-color);
+    border-color: var(--warning-color);
+    color: white;
+    transition: all 0.3s ease;
 }
