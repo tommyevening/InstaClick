@@ -1,0 +1,21 @@
+/* ----------------- */
+/* Particles Background */
+/* ----------------- */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ustaw wysokość na 100% widocznego obszaru */
+    z-index: -1; /* Upewnij się, że jest w tle */
+    pointer-events: none; /* Wyłącz interakcje z tłem */
+}
+
+canvas.particles-js-canvas-el {
+    display: block; /* Usuń ewentualne marginesy */
+    position: absolute; /* Ustaw absolutne pozycjonowanie */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

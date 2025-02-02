@@ -1,0 +1,88 @@
+/* ----------------- */
+/* Root & Reset      */
+/* ----------------- */
+:root {
+    /* Colors */
+    --primary-color: #00d4ff;
+    --secondary-color: #6c63ff;
+    --background-color: #0d1117;
+    --card-background: #161b22;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #30363d;
+    --success-color: #00ff85;
+    --warning-color: #ff4d4d;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    
+    /* Spacing */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    
+    /* Border radius */
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ----------------- */
+/* Base Styles       */
+/* ----------------- */
+body {
+    background: linear-gradient(135deg, #0d1117, #1a1f27);
+    background-attachment: fixed;
+    color: var(--text-primary);
+}
+
+h1, h2, h3 {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-container {
+    margin-top: 70px; /* Dopasuj do wysokości nawigacji */
+    padding: 20px; /* Dodatkowe odstępy wewnętrzne */
+}
+
+/* ----------------- */
+/* Animations        */
+/* ----------------- */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pointsPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
