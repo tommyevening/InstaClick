@@ -311,11 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && navItems) {
         hamburger.addEventListener('click', () => {
-            navItems.classList.toggle('mobile');
-            navItems.classList.toggle('hidden');
+            navItems.classList.toggle('mobile'); // Dodaj/usuń klasę "mobile"
             hamburger.innerHTML = navItems.classList.contains('mobile') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+                ? '<i class="fas fa-times"></i>' // Ikona zamknięcia
+                : '<i class="fas fa-bars"></i>'; // Ikona hamburgera
         });
     }
 });

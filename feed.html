@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="user.css">
-    <link rel="stylesheet" href="buttons.css">
-    <link rel="stylesheet" href="toast.css">
-    <link rel="stylesheet" href="particles.css">
+    <link rel="stylesheet" href="CSS/main.css">
+<link rel="stylesheet" href="CSS/navigation.css">
+<link rel="stylesheet" href="CSS/buttons.css">
+<link rel="stylesheet" href="CSS/profile.css">
+<link rel="stylesheet" href="CSS/user.css">
+<link rel="stylesheet" href="CSS/toast.css">
+<link rel="stylesheet" href="CSS/particles.css">
 </head>
 <body>
     <div id="particles-js"></div>
@@ -31,16 +31,18 @@
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Szukaj użytkowników...">
                     <i class="fas fa-search search-icon"></i>
-                    <div class="search-results"></div>
                 </div>
-                <a href="#" class="nav-link" data-tooltip="Strona główna"><i class="fas fa-home"></i></a>
-                <a href="#" class="nav-link" data-tooltip="Odkrywaj"><i class="fas fa-compass"></i></a>
-                <a href="#" class="nav-link" data-tooltip="Powiadomienia"><i class="fas fa-bell"></i></a>
+                <div class="nav-icons">
+                    <a href="#" class="nav-link" data-tooltip="Strona główna"><i class="fas fa-home"></i></a>
+                    <a href="#" class="nav-link" data-tooltip="Odkrywaj"><i class="fas fa-compass"></i></a>
+                    <a href="#" class="nav-link" data-tooltip="Powiadomienia"><i class="fas fa-bell"></i></a>
+                </div>
                 <div class="points-display" data-tooltip="Twoje punkty">
                     <i class="fas fa-star"></i>
                     <span class="points-value">1,250</span>
                 </div>
-                <div class="user-profile">
+                <!-- Zdjęcie profilowe w normalnym widoku -->
+                <div class="user-profile desktop-profile">
                     <img src="./assets/IMG_3324.jpeg" alt="Profile">
                     <span class="username">tommy</span>
                     <i class="fas fa-chevron-down"></i>
@@ -81,6 +83,11 @@
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts/particles.js"></script>
+    <script src="scripts/profileHover.js"></script>
+    <script src="scripts/hamburgerMenu.js"></script>
+    <script src="scripts/userManager.js"></script>
+    <script src="scripts/uiManager.js"></script>
+    <script src="scripts/general.js"></script>
 </body>
 </html>
