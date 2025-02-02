@@ -256,7 +256,7 @@ body {
 }
 
 .username {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-primary);
 }
@@ -296,7 +296,7 @@ body {
 /* Siatka użytkowników */
 .users-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     justify-content: center;
     padding: 20px;
@@ -310,8 +310,9 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .user-card:hover {
@@ -321,7 +322,7 @@ body {
 
 /* Zdjęcie w tle */
 .user-cover {
-    height: 150px;
+    height: 250px;
     overflow: hidden;
     position: relative;
 }
@@ -332,18 +333,31 @@ body {
     object-fit: cover;
 }
 
+/* Nagłówek użytkownika */
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Odstęp między zdjęciem a nazwą użytkownika */
+    margin-bottom: 10px; /* Odstęp od reszty sekcji */
+}
+
+/* Nazwa użytkownika */
+.user-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* Avatar użytkownika */
 .user-avatar {
-    width: 80px;
-    height: 80px;
+    width: 50px; /* Zmniejszony rozmiar avatara */
+    height: 50px;
     border-radius: 50%;
-    border: 4px solid var(--card-background);
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
     overflow: hidden;
     background: var(--card-background);
+    flex-shrink: 0; /* Zapobiega zmniejszaniu avatara */
+    margin: 2px 10px;
 }
 
 .user-avatar img {
@@ -355,28 +369,22 @@ body {
 /* Informacje o użytkowniku */
 .user-info {
     text-align: center;
-    padding: 60px 20px 20px;
+    padding: 15px 2px 1px;
 }
 
 .user-info h3 {
-    margin-bottom: 5px;
-    color: var(--text-primary);
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 18px; /* Zmniejszenie rozmiaru tekstu na mniejszych ekranach */
 }
 
 .user-bio {
-    color: var(--text-secondary);
-    font-size: 14px;
-    margin-bottom: 15px;
-    line-height: 1.4;
+    font-size: 15px; /* Zmniejszenie rozmiaru tekstu na mniejszych ekranach */
 }
 
 /* Statystyki użytkownika */
 .user-stats {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin: 15px 0;
     padding: 15px 0;
     border-top: 1px solid var(--border-color);
@@ -388,15 +396,11 @@ body {
 }
 
 .stat-value {
-    font-weight: 600;
-    color: var(--text-primary);
-    font-size: 16px;
+    font-size: 14px; /* Zmniejszenie rozmiaru tekstu na mniejszych ekranach */
 }
 
 .stat-label {
-    color: var(--text-secondary);
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 10px; /* Zmniejszenie rozmiaru tekstu na mniejszych ekranach */
 }
 
 /* Przyciski akcji */
@@ -405,6 +409,7 @@ body {
     gap: 10px;
     justify-content: center;
     margin-top: 15px;
+    padding-bottom: 10px;
 }
 
 .btn {
@@ -523,4 +528,101 @@ body {
     border-color: var(--warning-color);
     color: white;
     transition: all 0.3s ease;
+}
+
+
+/* Siatka użytkowników */
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Minimalna szerokość kolumny to 250px */
+    gap: 20px; /* Odstęp między elementami */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Media queries dla siatki */
+@media (max-width: 1200px) {
+    .users-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolumny na średnich ekranach */
+    }
+}
+
+@media (max-width: 768px) {
+    .users-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolumny na małych ekranach */
+    }
+}
+
+@media (max-width: 480px) {
+    .users-grid {
+        grid-template-columns: 1fr; /* 1 kolumna na bardzo małych ekranach */
+    }
+}
+
+/* Nawigacja */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów */
+}
+
+.search-container {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Elementy zawijają się na mniejszych ekranach */
+    justify-content: flex-end;
+}
+
+/* Media queries dla nawigacji */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Nawigacja w jednej kolumnie */
+        align-items: flex-start;
+    }
+
+    .search-container {
+        width: 100%; /* Rozciąga pole wyszukiwania na całą szerokość */
+    }
+
+    .nav-items {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Karta użytkownika */
+.user-card {
+    width: 100%; /* Karta zajmuje całą szerokość kolumny */
+    max-width: 300px; /* Maksymalna szerokość karty */
+    margin: 0 auto;
+}
+
+/* Media queries dla kart */
+@media (max-width: 768px) {
+    .user-card {
+        max-width: 250px; /* Zmniejszenie maksymalnej szerokości na mniejszych ekranach */
+    }
+}
+
+@media (max-width: 480px) {
+    .user-card {
+        max-width: 100%; /* Karta zajmuje całą szerokość na bardzo małych ekranach */
+    }
+}
+
+/* Media queries dla odstępów */
+@media (max-width: 768px) {
+    .user-info {
+        padding: 40px 10px 10px; /* Zmniejszenie odstępów wewnętrznych */
+    }
+
+    .user-stats {
+        gap: 10px; /* Zmniejszenie odstępów między statystykami */
+    }
 }

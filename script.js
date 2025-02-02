@@ -25,7 +25,7 @@ class UserManager {
             id: 1,
             username: '@travel_lover',
             bio: '✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów',
-            avatar: 'https://source.unsplash.com/random/100x100?portrait=1',
+            avatar: 'assets/download (8).jpg',
             cover: 'assets/download (8).jpg',
             followers: '1.2k',
             posts: '500',
@@ -33,7 +33,7 @@ class UserManager {
             category: 'travel'
         },
         {
-            id: 1,
+            id: 2,
             username: '@travel_lover',
             bio: '✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów',
             avatar: 'assets/download (7).jpg',
@@ -44,11 +44,33 @@ class UserManager {
             category: 'travel'
         },
         {
-            id: 1,
+            id: 3,
             username: '@travel_lover',
             bio: '✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów',
-            avatar: 'https://source.unsplash.com/random/100x100?portrait=1',
-            cover: 'https://source.unsplash.com/random/400x150?landscape=1',
+            avatar: 'assets/download (8).jpg',
+            cover: 'assets/download (8).jpg',
+            followers: '1.2k',
+            posts: '500',
+            rating: '4.8',
+            category: 'travel'
+        },
+        {
+            id: 4,
+            username: '@travel_lover',
+            bio: '✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów',
+            avatar: 'assets/download (7).jpg',
+            cover: 'assets/download (7).jpg',
+            followers: '1.2k',
+            posts: '500',
+            rating: '4.8',
+            category: 'travel'
+        },
+        {
+            id: 5,
+            username: '@travel_lover',
+            bio: '✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów',
+            avatar: 'assets/download (8).jpg',
+            cover: 'assets/download (8).jpg',
             followers: '1.2k',
             posts: '500',
             rating: '4.8',
@@ -62,12 +84,14 @@ class UserManager {
             <div class="user-card" data-aos="fade-up">
                 <div class="user-cover">
                     <img src="${user.cover}" alt="Cover">
-                    <div class="user-avatar">
-                        <img src="${user.avatar}" alt="Avatar">
-                    </div>
                 </div>
                 <div class="user-info">
-                    <h3>${user.username}</h3>
+                    <div class="user-header">
+                        <div class="user-avatar">
+                            <img src="${user.avatar}" alt="Avatar">
+                        </div>
+                        <h3>${user.username}</h3>
+                    </div>
                     <p class="user-bio">${user.bio}</p>
                     <div class="user-stats">
                         <div class="stat-item">
