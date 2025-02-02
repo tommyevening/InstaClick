@@ -222,3 +222,92 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 100, // Liczba cząsteczek
+            density: {
+                enable: true,
+                value_area: 800 // Gęstość cząsteczek
+            }
+        },
+        color: {
+            value: "#00d4ff" // Kolor cząsteczek
+        },
+        shape: {
+            type: "circle", // Kształt cząsteczek
+            stroke: {
+                width: 0,
+                color: "#000000"
+            }
+        },
+        opacity: {
+            value: 0.5,
+            random: false
+        },
+        size: {
+            value: 3,
+            random: true
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#6c63ff",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: {
+                enable: true,
+                mode: "repulse" // Efekt odpychania cząsteczek
+            },
+            onclick: {
+                enable: true,
+                mode: "push" // Dodawanie cząsteczek po kliknięciu
+            }
+        },
+        modes: {
+            repulse: {
+                distance: 100,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            }
+        }
+    },
+    retina_detect: true
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navItems = document.getElementById('navItems');
+
+    hamburger.addEventListener('click', () => {
+        navItems.classList.toggle('mobile'); // Dodaj/usuń klasę "mobile"
+        navItems.classList.toggle('hidden'); // Ukryj/pokaż menu
+    });
+});
+
+hamburger.addEventListener('click', () => {
+    navItems.classList.toggle('mobile');
+    navItems.classList.toggle('hidden');
+    hamburger.innerHTML = navItems.classList.contains('mobile') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+});
