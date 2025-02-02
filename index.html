@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaBoost - Społeczność wzajemnego wsparcia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-rocket"></i>
+                InstaBoost
+            </a>
+            <div class="nav-items">
+                <a href="#" class="nav-link" data-tooltip="Strona główna"><i class="fas fa-home"></i></a>
+                <a href="#" class="nav-link" data-tooltip="Odkrywaj"><i class="fas fa-compass"></i></a>
+                <a href="#" class="nav-link" data-tooltip="Powiadomienia"><i class="fas fa-bell"></i></a>
+                <div class="points-display" data-tooltip="Twoje punkty">
+                    <i class="fas fa-star"></i>
+                    <span class="points-value">1,250</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/32" alt="Profile">
+                    <span class="username">JanKowalski</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- User dropdown menu -->
+    <div class="user-dropdown">
+        <div class="dropdown-item">
+            <i class="fas fa-user"></i>
+            Profil
+        </div>
+        <div class="dropdown-item">
+            <i class="fas fa-cog"></i>
+            Ustawienia
+        </div>
+        <div class="dropdown-item">
+            <i class="fas fa-history"></i>
+            Historia
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item">
+            <i class="fas fa-sign-out-alt"></i>
+            Wyloguj
+        </div>
+    </div>
+
+    <!-- Główny kontener -->
+    <div class="main-container">
+        <!-- Filtry -->
+        <div class="filters" data-aos="fade-down">
+            <div class="filters-grid">
+                <div class="filter-item">
+                    <select id="categoryFilter">
+                        <option value="">Wszystkie kategorie</option>
+                        <option value="fashion">Moda</option>
+                        <option value="travel">Podróże</option>
+                        <option value="food">Jedzenie</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-item">
+                    <select id="sortFilter">
+                        <option value="">Sortuj według</option>
+                        <option value="followers">Liczba obserwujących</option>
+                        <option value="posts">Liczba postów</option>
+                        <option value="points">Punkty</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-item">
+                    <input type="text" placeholder="Szukaj użytkownika...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Siatka użytkowników -->
+        <div class="users-grid" id="usersGrid">
+            <div class="user-card">
+                <div class="user-cover">
+                    <img src="https://source.unsplash.com/random/400x150?landscape" alt="Cover">
+                </div>
+                <div class="user-avatar">
+                    <img src="https://source.unsplash.com/random/100x100?portrait" alt="Avatar">
+                </div>
+                <div class="user-info">
+                    <h3>@travel_lover</h3>
+                    <p class="user-bio">✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów</p>
+                    <div class="user-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">1.2k</div>
+                            <div class="stat-label">Obserwujących</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">500</div>
+                            <div class="stat-label">Postów</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4.8</div>
+                            <div class="stat-label">Ocena</div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Obserwuj</button>
+                        <button class="btn btn-secondary">Polub</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div class="loader">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span class="toast-message">Akcja wykonana pomyślnie!</span>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
