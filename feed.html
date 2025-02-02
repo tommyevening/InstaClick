@@ -8,40 +8,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/main.css">
-<link rel="stylesheet" href="CSS/navigation.css">
-<link rel="stylesheet" href="CSS/buttons.css">
-<link rel="stylesheet" href="CSS/profile.css">
-<link rel="stylesheet" href="CSS/user.css">
-<link rel="stylesheet" href="CSS/toast.css">
-<link rel="stylesheet" href="CSS/particles.css">
+    <link rel="stylesheet" href="CSS/navigation.css">
+    <link rel="stylesheet" href="CSS/buttons.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/user.css">
+    <link rel="stylesheet" href="CSS/toast.css">
+    <link rel="stylesheet" href="CSS/particles.css">
 </head>
 <body>
+    <!-- Particles.js container -->
     <div id="particles-js"></div>
+
     <!-- Nawigacja -->
     <nav class="navbar">
         <div class="nav-container">
+            <!-- Logo -->
             <a href="#" class="logo">
                 <i class="fas fa-rocket"></i>
                 InstaBoost
             </a>
+
+            <!-- Hamburger Menu Button -->
             <button class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
+
+            <!-- Navigation Items -->
             <div class="nav-items" id="navItems">
+                <!-- Search Bar -->
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Szukaj użytkowników...">
                     <i class="fas fa-search search-icon"></i>
                 </div>
+
+                <!-- Navigation Icons -->
                 <div class="nav-icons">
-                    <a href="#" class="nav-link" data-tooltip="Strona główna"><i class="fas fa-home"></i></a>
-                    <a href="#" class="nav-link" data-tooltip="Odkrywaj"><i class="fas fa-compass"></i></a>
-                    <a href="#" class="nav-link" data-tooltip="Powiadomienia"><i class="fas fa-bell"></i></a>
+                    <a href="#" class="nav-link" data-tooltip="Strona główna">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <a href="#" class="nav-link" data-tooltip="Odkrywaj">
+                        <i class="fas fa-compass"></i>
+                    </a>
+                    <a href="#" class="nav-link" data-tooltip="Powiadomienia">
+                        <i class="fas fa-bell"></i>
+                    </a>
                 </div>
+
+                <!-- Points Display -->
                 <div class="points-display" data-tooltip="Twoje punkty">
                     <i class="fas fa-star"></i>
                     <span class="points-value">1,250</span>
                 </div>
-                <!-- Zdjęcie profilowe w normalnym widoku -->
+
+                <!-- User Profile -->
                 <div class="user-profile desktop-profile">
                     <img src="./assets/IMG_3324.jpeg" alt="Profile">
                     <span class="username">tommy</span>
@@ -51,9 +70,7 @@
         </div>
     </nav>
 
-    
-
-    <!-- User dropdown menu -->
+    <!-- User Dropdown Menu -->
     <div class="user-dropdown">
         <div class="dropdown-item">
             <i class="fas fa-user"></i>
@@ -74,13 +91,15 @@
         </div>
     </div>
 
-    <!-- Główny kontener -->
+    <!-- Main Container -->
     <div class="main-container">
-        <!-- Siatka użytkowników -->
+        <!-- Users Grid -->
         <div class="users-grid" id="usersGrid">
-           
+            <!-- Grid items will be dynamically added here -->
         </div>
     </div>
+
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="scripts/particles.js"></script>
