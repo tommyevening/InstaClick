@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    .offer-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-stats {
+        justify-content: center;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
