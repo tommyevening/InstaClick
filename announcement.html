@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstaBoost - Oferta Użytkownika</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/navigation.css">
-    <link rel="stylesheet" href="offer.css">
-    <link rel="stylesheet" href="responsive.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>InstaBoost - Oferta Użytkownika</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="CSS/main.css">
+        <link rel="stylesheet" href="CSS/components/navbar.css">
+        <link rel="stylesheet" href="CSS/components/buttons.css">
+        <link rel="stylesheet" href="CSS/grid/particles.css">
+        <link rel="stylesheet" href="CSS/announcement/offer.css">
+        <link rel="stylesheet" href="CSS/announcement/responsive.css">
+        <link rel="stylesheet" href="CSS/announcement/buttons.css">
+    </head>
 <body>
     <div id="particles-js"></div>
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="feed.html" class="logo">
+            <!-- Logo -->
+            <a href="#" class="logo">
                 <i class="fas fa-rocket"></i>
-                InstaBoost
+                FindMe
             </a>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation Items -->
+            <div class="nav-items" id="navItems">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Szukaj użytkowników...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+
+                <!-- Navigation Icons -->
+                <div class="nav-icons">
+                    <a href="#" class="nav-link" data-tooltip="Strona główna">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <a href="#" class="nav-link" data-tooltip="Odkrywaj">
+                        <i class="fas fa-compass"></i>
+                    </a>
+                    <a href="#" class="nav-link" data-tooltip="Powiadomienia">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </div>
+
+                <!-- Points Display -->
+                <div class="points-display" data-tooltip="Twoje punkty">
+                    <i class="fas fa-star"></i>
+                    <span class="points-value">1,250</span>
+                </div>
+
+                <!-- User Profile -->
+                <div class="user-profile desktop-profile">
+                    <img src="./assets/IMG_3324.jpeg" alt="Profile">
+                    <span class="username">developer</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -30,16 +74,16 @@
                 <img src="https://placehold.co/100x100" alt="User Avatar">
             </div>
             <div class="user-info">
-                <h1>@travel_lover</h1>
-                <p>✈️ Podróżnik | 📸 Fotograf | 🌍 30 krajów</p>
+                <h1>@fullstack_dev</h1>
+                <p>💻 Full Stack Developer | 🚀 React & Node.js | 🌐 5 lat doświadczenia</p>
                 <div class="user-stats">
                     <div class="stat-item">
                         <i class="fas fa-users"></i>
-                        <span>1.2k obserwujących</span>
+                        <span>2.5k obserwujących</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-star"></i>
-                        <span>4.8 ocena</span>
+                        <span>4.9 ocena</span>
                     </div>
                     <div class="stat-item">
                         <i class="fas fa-check-circle"></i>
@@ -48,35 +92,34 @@
                 </div>
             </div>
         </div>
-
-        <!-- Offer Content -->
+        
         <div class="offer-content">
             <div class="offer-section">
                 <h2>O mnie</h2>
-                <p>Jestem profesjonalnym fotografem podróżnikiem z ponad 5-letnim doświadczeniem w tworzeniu contentu dla marek turystycznych i lifestylowych. Specjalizuję się w fotografii krajobrazowej i lifestyle'owej, ze szczególnym naciskiem na autentyczne, naturalne ujęcia.</p>
+                <p>Jestem doświadczonym programistą Full Stack z ponad 5-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych. Specjalizuję się w technologiach takich jak React, Node.js, MongoDB i AWS. Moje projekty cechuje wysoka jakość kodu, skalowalność oraz dbałość o szczegóły.</p>
             </div>
-
+        
             <div class="offer-section">
                 <h2>Moje usługi</h2>
                 <ul class="service-list">
                     <li class="service-item">
-                        <i class="fas fa-camera"></i>
-                        <span>Profesjonalna sesja zdjęciowa (2h)</span>
-                        <span class="price-tag">500 zł</span>
+                        <i class="fas fa-code"></i>
+                        <span>Tworzenie aplikacji webowych (React, Node.js)</span>
+                        <span class="price-tag">3000 zł</span>
                     </li>
                     <li class="service-item">
-                        <i class="fas fa-video"></i>
-                        <span>Film promocyjny (1-2 min)</span>
-                        <span class="price-tag">800 zł</span>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Tworzenie aplikacji mobilnych (React Native)</span>
+                        <span class="price-tag">4000 zł</span>
                     </li>
                     <li class="service-item">
-                        <i class="fas fa-images"></i>
-                        <span>Pakiet 10 zdjęć produktowych</span>
-                        <span class="price-tag">1000 zł</span>
+                        <i class="fas fa-server"></i>
+                        <span>Integracja z API i optymalizacja backendu</span>
+                        <span class="price-tag">2000 zł</span>
                     </li>
                 </ul>
             </div>
-
+        
             <div class="action-buttons">
                 <button class="btn btn-primary">Skontaktuj się</button>
                 <button class="btn btn-secondary">Zapisz ofertę</button>
@@ -85,7 +128,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/particles-config.js"></script>
-    <script src="js/main.js"></script>
+    <script src="scripts/grid/particles.js"></script>
+    <script src="scripts/components//profileHover.js"></script>
+    <script src="scripts/components/hamburgerMenu.js"></script>
+    <script src="scripts/generating/userManager.js"></script>
+    <script src="scripts/generating/uiManager.js"></script>
+    <script src="scripts/general.js"></script>
 </body>
 </html>

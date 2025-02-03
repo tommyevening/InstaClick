@@ -1,3 +1,6 @@
+/* ----------------- */
+/* Responsiveness    */
+/* ----------------- */
 @media (max-width: 768px) {
     .offer-header {
         flex-direction: column;
