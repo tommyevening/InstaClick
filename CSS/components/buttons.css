@@ -11,6 +11,8 @@
     transition: all var(--transition-speed) ease;
     position: relative;
     overflow: hidden;
+    text-decoration: none; /* Dodaj tę linię */
+    display: inline-block; /* Dodaj tę linię dla lepszego zachowania się przycisku */
 }
 
 .action-buttons{

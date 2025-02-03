@@ -27,12 +27,13 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    cursor: pointer;
 }
 
 .user-card:hover {
-    transform: translateY(-10px) scale(1.05); /* Powiększenie i przesunięcie */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4); /* Mocniejszy cień */
-    border: 1px solid var(--primary-color); /* Zmiana koloru obramowania */
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--primary-color);
 }
 
 .user-cover {
@@ -62,11 +63,14 @@
 }
 
 .user-header h3 {
+    color: #FFFFFF; /* Biały kolor czcionki */
+    font-weight: 600; /* Grubsza czcionka */
+    font-size: 1.2rem; /* Większy rozmiar */
     transition: color 0.4s ease;
 }
 
 .user-card:hover .user-header h3 {
-    color: var(--primary-color); /* Zmiana koloru nazwy użytkownika */
+    color: var(--primary-color); /* Zmiana koloru na hover */
 }
 
 .user-avatar {
@@ -116,17 +120,26 @@
 
 .user-stats {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Rozdzielenie statystyk */
     gap: 15px;
     margin: 15px 0;
     padding: 15px 0;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    transition: border-color 0.4s ease; /* Animacja koloru obramowania */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #E0E0E0; /* Jasnoszary kolor */
+    font-size: 0.9rem; /* Mniejszy rozmiar */
+    transition: border-color 0.4s ease, color 0.4s ease;
+}
+
+.user-stats div i {
+    font-size: 1.2rem; /* Ikony większe */
+    margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 .user-card:hover .user-stats {
-    border-color: var(--primary-color); /* Zmiana koloru obramowania sekcji statystyk */
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .action-buttons {

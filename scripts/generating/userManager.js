@@ -3,223 +3,223 @@ class UserManager {
     static sampleUsers = [
         {
             id: 1,
-            username: 'Anna Kowalska',
-            bio: '✏️ Copywriter | 📱 Content Manager | ✍️ 5 lat doświadczenia',
+            username: 'Julia Żugaj',
+            bio: '💄 Beauty & Lifestyle | 🎥 YouTube 2M sub | ✨ TikTok 1.5M',
             avatar: 'assets/OIP.jpg',
             cover: 'assets/OIP.jpg',
-            followers: '2.3k',
+            followers: '2.3M',
             posts: '800',
             rating: '4.9',
-            category: 'writing'
+            category: 'lifestyle'
         },
         {
             id: 2,
-            username: 'Piotr Nowak',
-            bio: '💻 Full Stack Developer | 🚀 React & Node.js | 🔧 100+ projektów',
-            avatar: 'assets/OIP (1).jpg',
-            cover: 'assets/OIP (1).jpg',
-            followers: '1.8k',
-            posts: '600',
+            username: 'Karol "Friz" Wiśniewski',
+            bio: '🎮 Gaming & Vlogi | 🚀 Ekipa | 💪 YouTube 4.8M sub',
+            avatar: 'assets/friz.jpg',
+            cover: 'assets/friz.jpg',
+            followers: '3.8M',
+            posts: '1.2K',
             rating: '4.7',
-            category: 'development'
+            category: 'gaming'
         },
         {
             id: 3,
-            username: 'Adam Marciniak',
-            bio: '🎨 Grafik | 🖌️ UI/UX Designer | 🎯 200+ realizacji',
+            username: 'Marcin Dubiel',
+            bio: '🎥 Vloger | 🎮 Gaming | 🎯 YouTube 2.5M sub',
             avatar: 'assets/OIP (2).jpg',
             cover: 'assets/OIP (2).jpg',
-            followers: '3.1k',
-            posts: '1.2k',
+            followers: '2.1M',
+            posts: '950',
             rating: '4.8',
-            category: 'design'
+            category: 'entertainment'
         },
         {
             id: 4,
-            username: 'Anna Lewandowska',
-            bio: '📸 Fotograf produktowy | 🎥 Videograf | 🎞️ 300+ sesji',
-            avatar: 'assets/OIP (3).jpg',
-            cover: 'assets/OIP (3).jpg',
-            followers: '2.5k',
+            username: 'Weronika Sowa (Wersow)',
+            bio: '💄 Beauty & Lifestyle | 🎵 Muzyka | ⭐️ Ekipa',
+            avatar: 'assets/wersow.jpg',
+            cover: 'assets/wersow.jpg',
+            followers: '2.5M',
             posts: '700',
             rating: '4.6',
-            category: 'photography'
+            category: 'lifestyle'
         },
         {
             id: 5,
-            username: 'Karol Dąbrowski',
-            bio: '📊 Digital Marketing | 💡 SEO Expert | 📈 50+ kampanii',
-            avatar: 'assets/OIP (4).jpg',
-            cover: 'assets/OIP (4).jpg',
-            followers: '1.9k',
+            username: 'Kacper Blonsky',
+            bio: '📱 Tech Reviewer | 💻 Gadgets | 🎥 YouTube 1.2M sub',
+            avatar: 'assets/kacper.jpg',
+            cover: 'assets/kacper.jpg',
+            followers: '1.9M',
             posts: '500',
             rating: '4.7',
-            category: 'marketing'
+            category: 'tech'
         },
         {
             id: 6,
-            username: 'Michał Zieliński',
-            bio: '🎬 Motion Designer | 🎨 3D Artist | 🎯 150+ animacji',
+            username: 'Mikołaj "Konopskyy" Tylko',
+            bio: '🎬 Commentary | 🎯 Drama | 💡 Śledztwa',
             avatar: 'assets/OIP (5).jpg',
             cover: 'assets/OIP (5).jpg',
-            followers: '2.7k',
-            posts: '900',
+            followers: '1.7M',
+            posts: '300',
             rating: '4.8',
-            category: 'animation'
+            category: 'commentary'
         },
         {
             id: 7,
-            username: 'Aleksandra Szymańska',
-            bio: '📱 Social Media Manager | 📊 Analityk | 💼 30+ marek',
+            username: 'Natalia Karczmarczyk (Natsu)',
+            bio: '📱 Lifestyle | 🎵 TikTok 3M | 💄 Beauty',
             avatar: 'assets/OIP (6).jpg',
             cover: 'assets/OIP (6).jpg',
-            followers: '3.5k',
+            followers: '3.5M',
             posts: '1.5k',
             rating: '4.9',
-            category: 'social-media'
+            category: 'lifestyle'
         },
         {
             id: 8,
-            username: 'Kasia Wojciechowska',
-            bio: '🔊 Sound Designer | 🎵 Kompozytor | 🎼 80+ projektów',
+            username: 'Krzysztof Gonciarz',
+            bio: '🎥 Filmmaker | 🗾 Japan Vlogs | 📚 Autor',
             avatar: 'assets/OIP (7).jpg',
             cover: 'assets/OIP (7).jpg',
-            followers: '2.1k',
+            followers: '1.8M',
             posts: '750',
             rating: '4.6',
-            category: 'audio'
+            category: 'travel'
         },
         {
             id: 9,
-            username: 'Magdalena Jankowska',
-            bio: '✍️ Tłumacz | 🌍 EN/DE/PL | 📚 1000+ tłumaczeń',
+            username: 'Marta Rentel (Marti Renti)',
+            bio: '💃 Lifestyle | 🎵 TikTok Star | 🌟 Model',
             avatar: 'assets/OIP (8).jpg',
             cover: 'assets/OIP (8).jpg',
-            followers: '1.6k',
+            followers: '1.6M',
             posts: '400',
             rating: '4.5',
-            category: 'translation'
+            category: 'lifestyle'
         },
         {
             id: 10,
-            username: 'Adam Kaczmarek',
-            bio: '📱 Mobile Developer | 📲 iOS & Android | 🚀 40+ aplikacji',
+            username: 'Wojtek Gola',
+            bio: '🥊 FAME MMA | 💪 Fitness | 🎥 Vloger',
             avatar: 'assets/OIP (9).jpg',
             cover: 'assets/OIP (9).jpg',
-            followers: '2.4k',
+            followers: '2.4M',
             posts: '850',
             rating: '4.7',
-            category: 'mobile-dev'
+            category: 'sport'
         },
         {
             id: 11,
-            username: 'Natalia Pawlak',
-            bio: '📝 Content Writer | 📰 SEO Copywriter | ✍️ 500+ artykułów',
+            username: 'Angelika Mucha (LittleMooonster96)',
+            bio: '🎮 Gaming | 💄 Beauty | 🎥 YouTube 2M',
             avatar: 'assets/OIP (10).jpg',
             cover: 'assets/OIP (10).jpg',
-            followers: '1.7k',
+            followers: '2.2M',
             posts: '600',
             rating: '4.6',
-            category: 'content'
+            category: 'gaming'
         },
         {
             id: 12,
-            username: 'Maria Wójcik',
-            bio: '🎨 Ilustrator | ✏️ Digital Artist | 🖼️ 200+ ilustracji',
+            username: 'Kasia Mecinski',
+            bio: '🎨 Art & Design | ✏️ Digital Art | 🎥 Tutorials',
             avatar: 'assets/OIP (11).jpg',
             cover: 'assets/OIP (11).jpg',
-            followers: '2.9k',
+            followers: '1.9M',
             posts: '1.1k',
             rating: '4.8',
-            category: 'illustration'
+            category: 'art'
         },
         {
             id: 13,
-            username: 'Michał Mazur',
-            bio: '📊 Data Analyst | 📈 Business Intelligence | 💹 60+ raportów',
+            username: 'Maciej "Z dvpy" Dąbrowski',
+            bio: '😂 Comedy | 🎭 Stand-up | 🎤 Podcast',
             avatar: 'assets/OIP (12).jpg',
             cover: 'assets/OIP (12).jpg',
-            followers: '1.5k',
+            followers: '1.5M',
             posts: '300',
             rating: '4.5',
-            category: 'data'
+            category: 'comedy'
         },
         {
             id: 14,
-            username: 'Magdalena Sikora',
-            bio: '🔧 DevOps Engineer | ☁️ Cloud Expert | 🚀 70+ wdrożeń',
+            username: 'Sylwia Przybysz',
+            bio: '🎵 Music | 🎥 Vlogs | 👶 Lifestyle',
             avatar: 'assets/OIP (13).jpg',
             cover: 'assets/OIP (13).jpg',
-            followers: '2.2k',
+            followers: '2.2M',
             posts: '700',
             rating: '4.7',
-            category: 'devops'
+            category: 'music'
         },
         {
             id: 15,
-            username: 'Katarzyna Witkowska',
-            bio: '📋 Project Manager | 🎯 Scrum Master | 📊 40+ projektów',
+            username: 'Karolina Gilon',
+            bio: '📺 TV Host | 👗 Fashion | 💄 Beauty',
             avatar: 'assets/OIP (14).jpg',
             cover: 'assets/OIP (14).jpg',
-            followers: '1.8k',
+            followers: '1.8M',
             posts: '500',
             rating: '4.6',
-            category: 'management'
+            category: 'fashion'
         },
         {
             id: 16,
-            username: 'Paweł Grabowski',
-            bio: '🔒 Security Expert | 🛡️ Pentester | 🔐 100+ audytów',
+            username: 'Piotr "Izak" Skowyrski',
+            bio: '🎮 Gaming | 🎯 CS:GO | 🎥 Twitch Partner',
             avatar: 'assets/OIP (15).jpg',
             cover: 'assets/OIP (15).jpg',
-            followers: '1.9k',
+            followers: '1.9M',
             posts: '400',
             rating: '4.5',
-            category: 'security'
+            category: 'gaming'
         },
         {
             id: 17,
-            username: 'Agnieszka Rutkowska',
-            bio: '📱 UX Researcher | 🎯 Product Designer | 💡 45+ badań',
+            username: 'Agnieszka Grzelak (Fagata)',
+            bio: '💄 Beauty | 🎵 Music | ⭐️ Team X',
             avatar: 'assets/OIP (16).jpg',
             cover: 'assets/OIP (16).jpg',
-            followers: '2.6k',
+            followers: '2.6M',
             posts: '900',
             rating: '4.8',
-            category: 'ux'
+            category: 'lifestyle'
         },
         {
             id: 18,
-            username: 'Ania Adamczyk',
-            bio: '🎥 Video Editor | 🎬 Motion Graphics | 🎞️ 250+ produkcji',
+            username: 'Stuart Burton (Stuu)',
+            bio: '🎮 Gaming | 🎥 YouTube 2M | 🎯 Minecraft',
             avatar: 'assets/OIP (17).jpg',
             cover: 'assets/OIP (17).jpg',
-            followers: '2.0k',
+            followers: '2.0M',
             posts: '600',
             rating: '4.7',
-            category: 'video'
+            category: 'gaming'
         },
         {
             id: 19,
-            username: 'Monika Szewczyk',
-            bio: '📊 Digital Analyst | 📈 Google Ads Expert | 💼 90+ kampanii',
+            username: 'Monika Kociołek',
+            bio: '🥗 Fitness & Health | 💪 Workout | 🥑 Diet',
             avatar: 'assets/OIP (18).jpg',
             cover: 'assets/OIP (18).jpg',
-            followers: '2.3k',
+            followers: '2.3M',
             posts: '700',
             rating: '4.8',
-            category: 'analytics'
+            category: 'fitness'
         },
         {
             id: 20,
-            username: 'Kamil Walczak',
-            bio: '🌐 Backend Developer | 💾 Database Expert | 🔧 120+ systemów',
+            username: 'Kamil Labudda (Budda)',
+            bio: '🎮 Gaming | 🎥 Vlogs | 🚀 Team X',
             avatar: 'assets/OIP (19).jpg',
             cover: 'assets/OIP (19).jpg',
-            followers: '3.0k',
+            followers: '3.0M',
             posts: '1.0k',
             rating: '4.9',
-            category: 'backend'
+            category: 'gaming'
         }
     ];
 
@@ -253,7 +253,7 @@ class UserManager {
                     </div>
                 </div>
                 <div class="action-buttons">
-                    <button class="btn btn-primary">Wyświetl profil</button>
+                    <a href="announcement.html" class="btn btn-primary">Wyświetl profil</a>
                     <button class="btn btn-secondary">Zapisz</button>
                 </div>
             </div>
