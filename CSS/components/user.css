@@ -1,16 +1,44 @@
 /* ----------------- */
 /* User Components   */
 /* ----------------- */
+
+.card {
+    position: relative; /* Ustawienie kontekstu z-index */
+    z-index: 2; /* Wyższy niż tło */
+    background-color: #ffffff;
+    border: 1px solid #d6e4ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-md);
+}
+
+.card .button-primary {
+    background-color: #5271ff; /* Niebieski */
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-speed);
+}
+
+.card .button-primary:hover {
+    background-color: #8c54ff; /* Fioletowy na hover */
+}
+
 .users-grid {
+    position: relative; /* Kontekst z-index */
+    z-index: 1; /* Wyższy niż -1 */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 25px;
     justify-content: center;
     padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Półprzezroczyste tło */
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1;
 }
 
 .user-card {
-    background: var(--card-background);
+    background: rgba(255, 255, 255, 0.85); /* Półprzezroczyste tło */
     border-radius: var(--border-radius-md);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -155,4 +183,170 @@
 
 .user-card:hover .action-buttons {
     transform: translateY(5px); /* Delikatne przesunięcie przycisków w dół */
+}
+
+/* W pliku CSS/components/user.css */
+
+/* Dodaj klasy dla płci */
+.user-card.male:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.5); /* Złoty cień dla mężczyzn */
+    border: 1px solid #ffd700; /* Złota ramka */
+}
+
+.user-card.female:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(255, 192, 203, 0.5); /* Różowy cień dla kobiet */
+    border: 1px solid #ffb6c1; /* Różowa ramka */
+}
+
+/* Modyfikacja efektów hover dla avatara */
+.user-card.male:hover .user-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffd700; /* Złoty cień dla mężczyzn */
+}
+
+.user-card.female:hover .user-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffb6c1; /* Różowy cień dla kobiet */
+}
+
+/* Modyfikacja nagłówka przy hover */
+.user-card.male:hover .user-header h3 {
+    color: #ffd700; /* Złoty tekst dla mężczyzn */
+}
+
+.user-card.female:hover .user-header h3 {
+    color: #ffb6c1; /* Różowy tekst dla kobiet */
+}
+
+/* Modyfikacja statystyk przy hover */
+.user-card.male:hover .user-stats {
+    border-color: #ffd700; /* Złote obramowanie dla mężczyzn */
+}
+
+.user-card.female:hover .user-stats {
+    border-color: #ffb6c1; /* Różowe obramowanie dla kobiet */
+}
+
+/* Modyfikacja kolorów tekstu dla różnych elementów karty */
+
+/* Dla mężczyzn */
+.user-card.male:hover .user-bio,
+.user-card.male:hover .stat-value,
+.user-card.male:hover .stat-label {
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+/* Dla kobiet */
+.user-card.female:hover .user-bio,
+.user-card.female:hover .stat-value,
+.user-card.female:hover .stat-label {
+    color: #ffb6c1; /* Różowy kolor tekstu */
+}
+
+/* Modyfikacja statystyk */
+.user-card.male:hover .user-stats {
+    border-color: #ffd700; /* Złote obramowanie */
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+.user-card.female:hover .user-stats {
+    border-color: #ffb6c1; /* Różowe obramowanie */
+    color: #ffb6c1; /* Różowy kolor tekstu */
+}
+
+/* Modyfikacja ikon w statystykach */
+.user-card.male:hover .user-stats div i {
+    color: #ffd700; /* Złoty kolor ikon */
+}
+
+.user-card.female:hover .user-stats div i {
+    color: #ffb6c1; /* Różowy kolor ikon */
+}
+
+/* Modyfikacja przycisków */
+.user-card.male:hover .btn-primary {
+    background-color: #ffd700; /* Złoty kolor tła */
+    color: #000000; /* Czarny tekst dla lepszego kontrastu */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.user-card.female:hover .btn-primary {
+    background-color: #ffb6c1; /* Różowy kolor tła */
+    color: #000000; /* Czarny tekst dla lepszego kontrastu */
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+.user-card.male:hover .btn-secondary {
+    border-color: #ffd700; /* Złote obramowanie */
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+.user-card.female:hover .btn-secondary {
+    border-color: #ffb6c1; /* Różowe obramowanie */
+    color: #ffb6c1; /* Różowy kolor tekstu */
+}
+
+/* Modyfikacja cienia przy hover dla przycisków */
+.user-card.male:hover .btn-secondary:hover {
+    background-color: #ffd700; /* Złoty kolor tła */
+    color: #000000; /* Czarny tekst */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.user-card.female:hover .btn-secondary:hover {
+    background-color: #ffb6c1; /* Różowy kolor tła */
+    color: #000000; /* Czarny tekst */
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+
+/* Style dla przycisków - mężczyźni */
+.user-card.male .btn-primary {
+    background-color: #ffd700; /* Złoty kolor tła */
+    color: #000000; /* Czarny tekst */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.user-card.male .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffd700; /* Złote obramowanie */
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+.user-card.male .btn-secondary:hover {
+    background-color: #ffd700;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Style dla przycisków - kobiety */
+.user-card.female .btn-primary {
+    background-color: #ffb6c1; /* Różowy kolor tła */
+    color: #000000; /* Czarny tekst */
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+.user-card.female .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffb6c1; /* Różowe obramowanie */
+    color: #ffb6c1; /* Różowy kolor tekstu */
+}
+
+.user-card.female .btn-secondary:hover {
+    background-color: #ffb6c1;
+    color: #000000;
+    box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+/* Efekty hover dla przycisków */
+.user-card.male .btn-primary:hover {
+    filter: brightness(1.2); /* Rozjaśnienie przy hover */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+}
+
+.user-card.female .btn-primary:hover {
+    filter: brightness(1.2); /* Rozjaśnienie przy hover */
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
 }

@@ -1,69 +1,31 @@
-// particles.js
 particlesJS('particles-js', {
     particles: {
         number: {
-            value: 100,
+            value: 120, // Więcej cząsteczek
             density: {
                 enable: true,
                 value_area: 800
             }
         },
         color: {
-            value: "#00d4ff"
-        },
-        shape: {
-            type: "circle",
-            stroke: {
-                width: 0,
-                color: "#000000"
-            }
+            value: ["#5271ff", "#8c54ff", "#ffd700"] // Niebieski, fioletowy, złoty
         },
         opacity: {
-            value: 0.5,
+            value: 0.8, // Większa widoczność
             random: false
         },
         size: {
-            value: 3,
+            value: 5, // Większe cząsteczki
             random: true
-        },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#6c63ff",
-            opacity: 0.4,
-            width: 1
         },
         move: {
             enable: true,
-            speed: 2,
+            speed: 1.5, // Wolniejszy ruch
             direction: "none",
-            random: false,
+            random: true,
             straight: false,
             out_mode: "out",
             bounce: false
         }
-    },
-    interactivity: {
-        detect_on: "canvas",
-        events: {
-            onhover: {
-                enable: true,
-                mode: "repulse"
-            },
-            onclick: {
-                enable: true,
-                mode: "push"
-            }
-        },
-        modes: {
-            repulse: {
-                distance: 100,
-                duration: 0.4
-            },
-            push: {
-                particles_nb: 4
-            }
-        }
-    },
-    retina_detect: true
+    }
 });

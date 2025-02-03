@@ -3,16 +3,19 @@
 /* ----------------- */
 :root {
     /* Colors */
-    --primary-color: #00d4ff;
-    --secondary-color: #6c63ff;
-    --background-color: #0d1117;
-    --card-background: #161b22;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --border-color: #30363d;
-    --success-color: #00ff85;
-    --warning-color: #ff4d4d;
-    --hover-color: rgba(255, 255, 255, 0.1);
+    --primary-color: #5271ff; /* Nowoczesny niebieski */
+    --secondary-color: #8c54ff; /* Fioletowy akcent */
+    --background-color: #ffffff; /* Białe tło */
+    --card-background: #ffffff; /* Białe tło kart */
+    --text-primary: #2d3436; /* Ciemny tekst */
+    --text-secondary: #636e72; /* Szary tekst */
+    --border-color: #edf2f7; /* Delikatne obramowanie */
+    --hover-color: rgba(82, 113, 255, 0.1); /* Niebieski hover */
+    
+    /* Akcenty dla różnych elementów */
+    --accent-success: #00b894; /* Zielony */
+    --accent-warning: #fdcb6e; /* Żółty */
+    --accent-danger: #ff7675; /* Czerwony */
     
     /* Spacing */
     --spacing-xs: 5px;
@@ -24,6 +27,11 @@
     --border-radius-sm: 8px;
     --border-radius-md: 15px;
     --border-radius-lg: 20px;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
     
     /* Transitions */
     --transition-speed: 0.3s;
@@ -40,7 +48,7 @@
 /* Base Styles       */
 /* ----------------- */
 body {
-    background: linear-gradient(135deg, #0d1117, #1a1f27);
+    background: linear-gradient(135deg, #e8f0ff, #d6e4ff); /* Jasnoniebieski gradient */
     background-attachment: fixed;
     color: var(--text-primary);
 }
@@ -52,8 +60,13 @@ h1, h2, h3 {
 }
 
 .main-container {
-    margin-top: 70px; /* Dopasuj do wysokości nawigacji */
-    padding: 20px; /* Dodatkowe odstępy wewnętrzne */
+    position: relative; /* Kontekst z-index */
+    z-index: 1; /* Wyższy niż -1 */
+    margin-top: 70px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Półprzezroczyste tło */
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--border-radius-lg);
 }
 
 /* ----------------- */

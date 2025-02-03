@@ -223,42 +223,48 @@ class UserManager {
         }
     ];
 
-    static createUserCard(user) {
-        return `
-            <div class="user-card" data-aos="fade-up">
-                <div class="user-cover">
-                    <img src="${user.cover}" alt="Cover">
-                </div>
-                <div class="user-info">
-                    <div class="user-header">
-                        <div class="user-avatar">
-                            <img src="${user.avatar}" alt="Avatar">
-                        </div>
-                        <h3>${user.username}</h3>
+    // W pliku scripts/generating/userManager.js
+
+static createUserCard(user) {
+    // Określ płeć na podstawie imienia
+    const isFemale = user.username.match(/a\s|Julia|Weronika|Natalia|Marta|Angelika|Kasia|Sylwia|Karolina|Agnieszka|Monika/);
+    const genderClass = isFemale ? 'female' : 'male';
+
+    return `
+        <div class="user-card ${genderClass}" data-aos="fade-up">
+            <div class="user-cover">
+                <img src="${user.cover}" alt="Cover">
+            </div>
+            <div class="user-info">
+                <div class="user-header">
+                    <div class="user-avatar">
+                        <img src="${user.avatar}" alt="Avatar">
                     </div>
-                    <p class="user-bio">${user.bio}</p>
-                    <div class="user-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">${user.followers}</div>
-                            <div class="stat-label">Obserwujących</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">${user.posts}</div>
-                            <div class="stat-label">Postów</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">${user.rating}</div>
-                            <div class="stat-label">Ocena</div>
-                        </div>
-                    </div>
+                    <h3>${user.username}</h3>
                 </div>
-                <div class="action-buttons">
-                    <a href="announcement.html" class="btn btn-primary">Wyświetl profil</a>
-                    <button class="btn btn-secondary">Zapisz</button>
+                <p class="user-bio">${user.bio}</p>
+                <div class="user-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">${user.followers}</div>
+                        <div class="stat-label">Obserwujących</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">${user.posts}</div>
+                        <div class="stat-label">Postów</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">${user.rating}</div>
+                        <div class="stat-label">Ocena</div>
+                    </div>
                 </div>
             </div>
-        `;
-    }
+            <div class="action-buttons">
+                <a href="announcement.html" class="btn btn-primary">Wyświetl profil</a>
+                <button class="btn btn-secondary">Zapisz</button>
+            </div>
+        </div>
+    `;
+}
 
     static loadUsers() {
         const usersGrid = document.getElementById('usersGrid');
