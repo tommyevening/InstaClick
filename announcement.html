@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>InstaBoost - Oferta Użytkownika</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="CSS/main.css">
-        <link rel="stylesheet" href="CSS/components/navbar.css">
-        <link rel="stylesheet" href="CSS/components/buttons.css">
-        <link rel="stylesheet" href="CSS/grid/particles.css">
-        <link rel="stylesheet" href="CSS/announcement/offer.css">
-        <link rel="stylesheet" href="CSS/announcement/responsive.css">
-        <link rel="stylesheet" href="CSS/announcement/buttons.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaBoost - Oferta Użytkownika</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/grid/particles.css">
+    <link rel="stylesheet" href="CSS/components/navbar.css">
+    <link rel="stylesheet" href="CSS/components/buttons.css">
+    <link rel="stylesheet" href="CSS/announcement/main.css">
+    <link rel="stylesheet" href="CSS/announcement/profile.css">
+    <link rel="stylesheet" href="CSS/announcement/buttons.css">
+    <link rel="stylesheet" href="CSS/announcement/sections.css">
+    <link rel="stylesheet" href="CSS/announcement/services.css">
+    <link rel="stylesheet" href="CSS/announcement/responsive.css">
+</head>
 <body>
+    <!-- Particles Background -->
     <div id="particles-js"></div>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <!-- Logo -->
@@ -25,20 +36,20 @@
                 FindMe
             </a>
 
-            <!-- Hamburger Menu Button -->
+            <!-- Mobile Menu Button -->
             <button class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Navigation Items -->
+            <!-- Navigation Menu -->
             <div class="nav-items" id="navItems">
-                <!-- Search Bar -->
+                <!-- Search -->
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Szukaj użytkowników...">
                     <i class="fas fa-search search-icon"></i>
                 </div>
 
-                <!-- Navigation Icons -->
+                <!-- Navigation Links -->
                 <div class="nav-icons">
                     <a href="#" class="nav-link" data-tooltip="Strona główna">
                         <i class="fas fa-home"></i>
@@ -51,7 +62,7 @@
                     </a>
                 </div>
 
-                <!-- Points Display -->
+                <!-- User Points -->
                 <div class="points-display" data-tooltip="Twoje punkty">
                     <i class="fas fa-star"></i>
                     <span class="points-value">1,250</span>
@@ -60,76 +71,159 @@
                 <!-- User Profile -->
                 <div class="user-profile desktop-profile">
                     <img src="./assets/IMG_3324.jpeg" alt="Profile">
-                    <span class="username">developer</span>
+                    <span class="username">tommy</span>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <div class="main-container">
-        <!-- Offer Header -->
-        <div class="offer-header">
-            <div class="user-avatar">
-                <img src="https://placehold.co/100x100" alt="User Avatar">
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://placehold.co/120x120" alt="Profile Avatar">
+                </div>
+                <div class="profile-info">
+                    <h1>@fullstack_dev</h1>
+                    <p class="profile-bio">💻 Full Stack Developer | 🚀 React & Node.js | 🌐 5 lat doświadczenia</p>
+                    
+                    <!-- Profile Statistics -->
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>2.5k obserwujących</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 ocena</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Zweryfikowany</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-primary">Skontaktuj się</button>
+                    <button class="btn btn-secondary">Zapisz profil</button>
+                </div>
             </div>
-            <div class="user-info">
-                <h1>@fullstack_dev</h1>
-                <p>💻 Full Stack Developer | 🚀 React & Node.js | 🌐 5 lat doświadczenia</p>
-                <div class="user-stats">
-                    <div class="stat-item">
-                        <i class="fas fa-users"></i>
-                        <span>2.5k obserwujących</span>
+
+            <!-- Profile Sections -->
+            <div class="profile-sections">
+                <!-- About Me Section -->
+                <div class="info-section full-width">
+                    <h3>O mnie</h3>
+                    <div class="about-me">
+                        <p>Jestem pasjonatem technologii z 5-letnim doświadczeniem w tworzeniu aplikacji webowych. 
+                           Specjalizuję się w architekturze full-stack i zawsze dążę do tworzenia skalowalnych, 
+                           wydajnych rozwiązań. Aktywnie udzielam się w społeczności open-source i prowadzę 
+                           technologicznego bloga.</p>
                     </div>
-                    <div class="stat-item">
-                        <i class="fas fa-star"></i>
-                        <span>4.9 ocena</span>
+                </div>
+
+                <!-- Three Columns Grid -->
+                <div class="three-columns-grid">
+                    <!-- Technologies Section -->
+                    <div class="info-section">
+                        <h3>Technologie</h3>
+                        <div class="tag-container">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">AWS</span>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Zweryfikowany</span>
+
+                    <!-- Experience Section -->
+                    <div class="info-section">
+                        <h3>Doświadczenie</h3>
+                        <div class="experience-container">
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Senior Full Stack Developer</h4>
+                                    <span class="date">2021 - obecnie</span>
+                                </div>
+                                <p>TechCorp Solutions</p>
+                            </div>
+                            <div class="experience-item">
+                                <div class="experience-header">
+                                    <h4>Full Stack Developer</h4>
+                                    <span class="date">2019 - 2021</span>
+                                </div>
+                                <p>Digital Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests Section -->
+                    <div class="info-section">
+                        <h3>Zainteresowania</h3>
+                        <div class="tag-container">
+                            <span class="tag">Open Source</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">Cloud Computing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Section -->
+                <div class="info-section full-width">
+                    <h3>Oferta</h3>
+                    <div class="services-container">
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h4>Rozwój Aplikacji Webowych</h4>
+                                <span class="price">od 150 PLN/h</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>Aplikacje React/Node.js</li>
+                                <li>REST API</li>
+                                <li>Integracje z bazami danych</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h4>Konsultacje Techniczne</h4>
+                                <span class="price">od 200 PLN/h</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>Code review</li>
+                                <li>Architektura systemu</li>
+                                <li>Optymalizacja wydajności</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <h4>Szkolenia</h4>
+                                <span class="price">od 1000 PLN/dzień</span>
+                            </div>
+                            <ul class="service-features">
+                                <li>React.js dla zespołów</li>
+                                <li>Node.js best practices</li>
+                                <li>TypeScript workshops</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="offer-content">
-            <div class="offer-section">
-                <h2>O mnie</h2>
-                <p>Jestem doświadczonym programistą Full Stack z ponad 5-letnim doświadczeniem w tworzeniu aplikacji webowych i mobilnych. Specjalizuję się w technologiach takich jak React, Node.js, MongoDB i AWS. Moje projekty cechuje wysoka jakość kodu, skalowalność oraz dbałość o szczegóły.</p>
-            </div>
-        
-            <div class="offer-section">
-                <h2>Moje usługi</h2>
-                <ul class="service-list">
-                    <li class="service-item">
-                        <i class="fas fa-code"></i>
-                        <span>Tworzenie aplikacji webowych (React, Node.js)</span>
-                        <span class="price-tag">3000 zł</span>
-                    </li>
-                    <li class="service-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span>Tworzenie aplikacji mobilnych (React Native)</span>
-                        <span class="price-tag">4000 zł</span>
-                    </li>
-                    <li class="service-item">
-                        <i class="fas fa-server"></i>
-                        <span>Integracja z API i optymalizacja backendu</span>
-                        <span class="price-tag">2000 zł</span>
-                    </li>
-                </ul>
-            </div>
-        
-            <div class="action-buttons">
-                <button class="btn btn-primary">Skontaktuj się</button>
-                <button class="btn btn-secondary">Zapisz ofertę</button>
-            </div>
-        </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="scripts/grid/particles.js"></script>
-    <script src="scripts/components//profileHover.js"></script>
+    <script src="scripts/components/profileHover.js"></script>
     <script src="scripts/components/hamburgerMenu.js"></script>
     <script src="scripts/generating/userManager.js"></script>
     <script src="scripts/generating/uiManager.js"></script>

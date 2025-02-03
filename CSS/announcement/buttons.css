@@ -1,40 +1,65 @@
-/* ----------------- */
-/* Action Buttons    */
-/* ----------------- */
+/* Buttons */
 .action-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 10px;
 }
 
 .btn {
-    padding: 12px 25px;
-    border-radius: var(--border-radius-sm);
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px; 
     font-size: 16px;
-    transition: all var(--transition-speed) ease;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:hover::after {
+    width: 300px;
+    height: 300px;
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: 0 0 10px var(--primary-color);
+    background-color: #00d4ff; 
+    color: #ffffff; 
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.8), 0 0 40px rgba(0, 212, 255, 0.6); 
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color);
-    box-shadow: 0 0 15px var(--secondary-color);
+    background-color: #6c63ff; 
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.9), 0 0 50px rgba(108, 99, 255, 0.7); 
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--text-primary);
+    color: #ffd700; 
+    border: 2px solid #ffd700; 
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); 
 }
 
 .btn-secondary:hover {
-    background-color: var(--hover-color);
+    background-color: #ffd700; 
+    color: #000000; 
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.6); 
 }

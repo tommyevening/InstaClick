@@ -1,0 +1,121 @@
+/* Profile Sections */
+.profile-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.full-width {
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.three-columns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+/* Info Sections */
+.info-section {
+    padding: 20px; /* Odstępy wewnętrzne */
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(108, 99, 255, 0.1)); /* Gradient */
+    border-radius: var(--border-radius-sm); /* Zaokrąglone rogi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja */
+    box-sizing: border-box; /* Uwzględnij padding w szerokości */
+    overflow: hidden; /* Ukryj elementy wychodzące poza sekcję */
+}
+
+
+
+.info-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-section h3 {
+    margin-bottom: 15px;
+}
+
+/* Tags */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid var(--primary-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.tag:hover {
+    background: rgba(0, 212, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* About Me Section */
+.about-me {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: var(--border-radius-sm);
+    transition: all var(--transition-speed) ease;
+}
+
+.about-me:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.about-me p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Experience Section */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.experience-item {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.experience-item:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    flex-wrap: nowrap;
+}
+
+.experience-header h4 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.date {
+    white-space: nowrap;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+}
