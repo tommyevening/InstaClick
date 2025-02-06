@@ -48,11 +48,11 @@
                     <a href="#" class="nav-link" data-tooltip="Strona główna">
                         <i class="fas fa-home"></i>
                     </a>
-                    <a href="#" class="nav-link" data-tooltip="Odkrywaj">
-                        <i class="fas fa-compass"></i>
-                    </a>
                     <a href="#" class="nav-link" data-tooltip="Powiadomienia">
                         <i class="fas fa-bell"></i>
+                    </a>
+                    <a href="#" class="nav-link" data-tooltip="Odkrywaj">
+                        <i class="fas fa-compass"></i>
                     </a>
                 </div>
 
@@ -101,50 +101,40 @@
         </div>
         <ul class="sidebar-menu">
             <li>
-                <label for="content-type">Rodzaj contentu:</label>
-                <select id="content-type">
+                <label for="category">Kategoria:</label>
+                <select id="category">
                     <option value="all">Wszystkie</option>
-                    <option value="lifestyle">Lifestyle</option>
-                    <option value="tech">Technologia</option>
-                    <option value="beauty">Uroda</option>
-                    <option value="fitness">Fitness</option>
-                    <option value="gaming">Gaming</option>
+                    <option value="design">Grafika</option>
+                    <option value="development">Programowanie</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="writing">Pisanie</option>
                 </select>
             </li>
             <li>
-                <label for="price-range">Zakres cenowy (PLN):</label>
+                <label for="price-range">Stawka godzinowa (PLN):</label>
                 <div class="price-range-container">
-                    <input type="range" id="price-min" min="0" max="100000" step="100" value="0">
-                    <input type="range" id="price-max" min="0" max="100000" step="100" value="10000">
+                    <input type="range" id="price-min" min="20" max="500" step="10" value="50">
+                    <input type="range" id="price-max" min="20" max="500" step="10" value="200">
                 </div>
-                <span id="price-range-display">0 PLN - 10,000 PLN</span>
+                <span id="price-range-display">50 PLN - 200 PLN</span>
             </li>
             <li>
-                <label for="availability">Dostępność:</label>
-                <select id="availability">
+                <label for="experience">Doświadczenie:</label>
+                <select id="experience">
                     <option value="all">Wszystkie</option>
-                    <option value="available">Dostępni</option>
-                    <option value="busy">Zajęci</option>
+                    <option value="junior">Junior</option>
+                    <option value="mid">Mid</option>
+                    <option value="senior">Senior</option>
                 </select>
             </li>
-            <!-- Zmień te dwa elementy li w sidebar-menu -->
-<li>
-    <label for="followers">Zakres obserwujących:</label>
-    <div class="range-container">
-        <input type="range" id="followers-min" min="0" max="5000000" step="1000" value="0">
-        <input type="range" id="followers-max" min="0" max="5000000" step="1000" value="5000000">
-    </div>
-    <span id="followers-range-display">0 - 5,000,000 obserwujących</span>
-</li>
-
-<li>
-    <label for="rating">Zakres ocen:</label>
-    <div class="range-container">
-        <input type="range" id="rating-min" min="0" max="5" step="0.1" value="0">
-        <input type="range" id="rating-max" min="0" max="5" step="0.1" value="5">
-    </div>
-    <span id="rating-range-display">0 - 5.0</span>
-</li>
+            <li>
+                <label for="rating">Ocena freelancerów:</label>
+                <div class="range-container">
+                    <input type="range" id="rating-min" min="0" max="5" step="0.1" value="3">
+                    <input type="range" id="rating-max" min="0" max="5" step="0.1" value="5">
+                </div>
+                <span id="rating-range-display">3.0 - 5.0</span>
+            </li>
         </ul>
     </div>
 
@@ -157,108 +147,16 @@
     </div>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="scripts/grid/particles.js"></script>
-    <script src="scripts/components//profileHover.js"></script>
-    <script src="scripts/components/hamburgerMenu.js"></script>
-    <script src="scripts/generating/userManager.js"></script>
-    <script src="scripts/generating/uiManager.js"></script>
-    <script src="scripts/general.js"></script>
-    <script>
-    const sidebar = document.getElementById('sidebar');
-        const toggleBtn = document.getElementById('toggleBtn');
-        
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('expanded');
-        });
-        </script>
-
-        <script>
-            // Pobieranie elementów
-const priceRange = document.getElementById('price-range');
-const priceValue = document.getElementById('price-value');
-const followersRange = document.getElementById('followers');
-const followersValue = document.getElementById('followers-value');
-const ratingRange = document.getElementById('rating');
-const ratingValue = document.getElementById('rating-value');
-
-// Funkcja aktualizująca wartość suwaka
-function updateRangeValue(range, display, unit = '') {
-    range.addEventListener('input', () => {
-        if (range.id === 'price-range') {
-            display.textContent = `${range.value} PLN`;
-        } else if (range.id === 'followers') {
-            display.textContent = `${range.value.toLocaleString()} obserwujących`;
-        } else if (range.id === 'rating') {
-            display.textContent = `${range.value} / 5`;
-        }
-    });
-}
-
-// Aktualizacja wartości dla każdego suwaka
-updateRangeValue(priceRange, priceValue, 'PLN');
-updateRangeValue(followersRange, followersValue, 'obserwujących');
-updateRangeValue(ratingRange, ratingValue, '/ 5');
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-    // Konfiguracja zakresów
-    const ranges = [
-        {
-            minId: 'price-min',
-            maxId: 'price-max',
-            displayId: 'price-range-display',
-            step: 100,
-            format: (value) => `${Number(value).toLocaleString()} PLN`
-        },
-        {
-            minId: 'followers-min',
-            maxId: 'followers-max',
-            displayId: 'followers-range-display',
-            step: 1000,
-            format: (value) => `${Number(value).toLocaleString()}`
-        },
-        {
-            minId: 'rating-min',
-            maxId: 'rating-max',
-            displayId: 'rating-range-display',
-            step: 0.1,
-            format: (value) => Number(value).toFixed(1)
-        }
-    ];
-
-    // Inicjalizacja wszystkich zakresów
-    ranges.forEach(range => {
-        const minInput = document.getElementById(range.minId);
-        const maxInput = document.getElementById(range.maxId);
-        const display = document.getElementById(range.displayId);
-
-        function updateRange() {
-            const min = parseFloat(minInput.value);
-            const max = parseFloat(maxInput.value);
-
-            // Zapobiegaj nakładaniu się suwaków
-            if (min >= max) {
-                minInput.value = max - range.step;
-            }
-            if (max <= min) {
-                maxInput.value = min + range.step;
-            }
-
-            // Aktualizuj wyświetlany zakres
-            display.textContent = `${range.format(minInput.value)} - ${range.format(maxInput.value)}`;
-        }
-
-        // Nasłuchiwanie zmian
-        minInput.addEventListener('input', updateRange);
-        maxInput.addEventListener('input', updateRange);
-
-        // Inicjalizacja wyświetlania
-        updateRange();
-    });
-});
-        </script>
+    <!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="scripts/grid/particles.js"></script>
+<script src="scripts/components/profileHover.js"></script>
+<script src="scripts/components/hamburgerMenu.js"></script>
+<script src="scripts/generating/userManager.js"></script>
+<script src="scripts/generating/uiManager.js"></script>
+<script src="scripts/general.js"></script>
+<script src="scripts/sidebar/rangeSlider.js"></script>
+<script src="scripts/sidebar/sidebar.js"></script>
 </body>
 </html>

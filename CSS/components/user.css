@@ -31,14 +31,10 @@
     gap: 25px;
     justify-content: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Półprzezroczyste tło */
-    border-radius: 15px;
-    padding: 20px;
-    z-index: 1;
 }
 
 .user-card {
-    background: rgba(255, 255, 255, 0.85); /* Półprzezroczyste tło */
+    /* background: rgba(255, 255, 255, 0.85); Półprzezroczyste tło */
     border-radius: var(--border-radius-md);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -349,4 +345,21 @@
 .user-card.female .btn-primary:hover {
     filter: brightness(1.2); /* Rozjaśnienie przy hover */
     box-shadow: 0 0 20px rgba(255, 182, 193, 0.7);
+}
+
+.user-card.male .user-header h3 {
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+.user-card.male:hover .user-header h3 {
+    color: #ffd700; /* Złoty kolor tekstu */
+}
+
+/* Dla kobiet */
+.user-card.female .user-header h3 {
+    color: #ffb6c1; /* Różowy kolor tekstu */
+}
+
+.user-card.female:hover .user-header h3 {
+    color: #ffb6c1; /* Różowy kolor tekstu */
 }

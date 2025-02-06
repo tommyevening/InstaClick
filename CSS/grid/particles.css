@@ -6,40 +6,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    z-index: -1; /* Tło */
-    pointer-events: none; /* Wyłączenie interakcji */
-    background: linear-gradient(135deg, #f8faff, #ffffff); /* Jasne tło */
-}
-
-.particles-js .particles {
-    color: var(--primary-color); /* Niebieski */
-}
-
-/* Dodatkowe style dla particles */
-#particles-js canvas {
-    opacity: 0.4; /* Zmniejszona przezroczystość dla delikatniejszego efektu */
-}
-
-/* Możesz też dodać animację gradientu w tle */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-#particles-js {
-    background: linear-gradient(135deg, 
-        rgba(82, 113, 255, 0.05), /* Niebieski */
-        rgba(140, 84, 255, 0.05), /* Fioletowy */
-        rgba(248, 250, 255, 0.1)  /* Jasny */
-    );
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
+    height: 100vh; /* Ustaw wysokość na 100% widocznego obszaru */
+    z-index: -1; /* Upewnij się, że jest w tle */
+    pointer-events: none; /* Wyłącz interakcje z tłem */
+    background: linear-gradient(135deg, #0d1117, #161b22);
 }
